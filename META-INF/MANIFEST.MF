@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ProteinViewer-Node extension for KNIME Workbench
+Bundle-SymbolicName: de.openms.proteinviewer;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: proteinviewer.jar
+Bundle-Vendor: 
+Require-Bundle: org.eclipse.core.runtime,
+ org.knime.workbench.core,
+ org.knime.workbench.repository,
+ org.knime.base,
+ org.knime.dynamic.js;bundle-version="3.3.0",
+ org.knime.dynamic.node.generation;bundle-version="3.3.0",
+ org.knime.js.core;bundle-version="3.3.0"
+

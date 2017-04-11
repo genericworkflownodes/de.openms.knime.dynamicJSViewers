@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.knime.dynamic.node.generation.dynamicNodes">
+      <dynamicNodeFolder
+            function="js"
+            name="OpenMS Javascript Views"
+            path="nodes/">
+      </dynamicNodeFolder>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.nodes">
+   </extension>
+   <extension
+         point="org.knime.js.core.webResources">
+      <webResourceBundle
+            debug="true"
+            name="bioJS"
+            usesDefine="false"
+            version="1.0"
+            webResourceBundleID="bioJS">
+         <webResource
+               relativePathSource="dependencies/bioJS/"
+               relativePathTarget="dependencies/bioJS/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/bioJS/sequence-viewer.js"
+               type="JAVASCRIPT">
+         </importResource>
+         <webDependency
+               webResourceBundleID="handlebars">
+         </webDependency>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            name="dynaTable"
+            usesDefine="false"
+            version="de.openms.proteinviewer.webResourceBundle1"
+            webResourceBundleID="dynaTable">
+         <webResource
+               relativePathSource="dependencies/dynaTable/"
+               relativePathTarget="dependencies/dynaTable/">
+         </webResource>
+         <webDependency
+               webResourceBundleID="jQuery_1.11.0">
+         </webDependency>
+         <importResource
+               relativePath="dependencies/dynaTable/jquery.dynatable.js"
+               type="JAVASCRIPT">
+         </importResource>
+         <importResource
+               relativePath="dependencies/dynaTable/jquery.dynatable.css"
+               type="CSS">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            exports="Handlebars"
+            name="handlebars"
+            usesDefine="true"
+            version="4.0.5"
+            webResourceBundleID="handlebars">
+         <webResource
+               relativePathSource="dependencies/handlebars/handlebars-v4.0.5.js"
+               relativePathTarget="dependencies/handlebars/handlebars-v4.0.5.js">
+         </webResource>
+         <importResource
+               relativePath="dependencies/handlebars/handlebars-v4.0.5.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="false"
+            name="bootstrap"
+            usesDefine="false"
+            version="3.3.5"
+            webResourceBundleID="bootstrap">
+         <webResource
+               relativePathSource="dependencies/bootstrap/"
+               relativePathTarget="dependencies/bootstrap/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/bootstrap/bootstrap.min.css"
+               type="CSS">
+         </importResource>
+      </webResourceBundle>
+   </extension>
+
+   <!-- This is an example for providing an own category 
+      <extension
+         point="org.knime.workbench.repository.categories">
+      <category
+            description="Category containing my nodes"
+            icon="icons/default.png"
+            level-id="myNodes"
+            name="My nodes"
+            path="/"/>
+   </extension>
+   -->
+   
+   
+</plugin>
