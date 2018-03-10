@@ -40,7 +40,7 @@
 		    }
 		    
 		    window.Handlebars = dependencyObjects[1];
-        drawChart(table.getRows()[0], dependencyObjects);
+        drawChart(table.getRows()[0]);
         drawControls();
     };
     

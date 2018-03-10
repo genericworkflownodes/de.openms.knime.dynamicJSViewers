@@ -2,6 +2,7 @@
 	var input = {};
 	var _value, _representation;
 	var _data;
+	var outTable;
 	
 	// I think there are currently some problems with the order of dependency objects
 	input.init = function(representation, value, dependencyObjects){
@@ -71,7 +72,7 @@
 	    });
 	    
 	    //var outTable={'@class': 'org.knime.core.data.StringValue', value: 'val'};
-	     var outTable={		'@class': 'org.knime.js.core.JSONDataTable',
+	     outTable={		'@class': 'org.knime.js.core.JSONDataTable',
 	                   		id: 'annotatedTable',
 	                   		rows:
 	     							[
@@ -97,8 +98,10 @@
 		//	_value.outTables.annotatedTable[row.rowKey] = row.data;
 		//}
 
-	    _value.tables['annotatedTable'] = outTable;
-	    $('#btnGo').click(function(){
+	    _value.tables.annotatedTable = outTable;
+	    
+	    //IMportant: This is the click event
+	    /*$('#btnGo').click(function(){
 	            $('table').find('tr').not(':first').each(function(){
 	                var id = this.cells[0].innerHTML;
 	                //alert(id);
@@ -113,7 +116,7 @@
 	            });
 	            alert(JSON.stringify(outTable));
 	            _value.tables['annotatedTable'].table = outTable;
-	    });
+	    });*/
 	    
 	};
 	
@@ -164,7 +167,7 @@
 		//  };
 		// 	_value.tables['annotatedTable'] = outTable;
 		// }
-		
+		_value.tables.annotatedTable = outTable;
 		return _value;
 	};
 	
