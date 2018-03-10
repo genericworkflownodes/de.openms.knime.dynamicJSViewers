@@ -222,6 +222,17 @@
          </importResource>
       </webResourceBundle>
    </extension>
+   <extension
+         point="org.knime.workbench.repository.categories">
+      <category
+            description="Visualizations for mass spectrometry data"
+            icon="nodes/js.png"
+            level-id="Visualization"
+            locked="false"
+            name="Visualization"
+            path="community/OpenMS">
+      </category>
+   </extension>
 
    <!-- This is an example for providing an own category 
       <extension
