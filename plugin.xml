@@ -221,6 +221,19 @@
                type="JAVASCRIPT">
          </importResource>
       </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            name="de.openms.knime.dynamicJSViewers.webResourceBundle1"
+            usesDefine="false"
+            version="de.openms.knime.dynamicJSViewers.webResourceBundle1"
+            webResourceBundleID="de.openms.knime.dynamicJSViewers.webResourceBundle1">
+         <webResource
+               relativePathSource="de.openms.knime.dynamicJSViewers.webResource1">
+         </webResource>
+         <webDependency
+               webResourceBundleID="de.openms.knime.dynamicJSViewers.webDependency1">
+         </webDependency>
+      </webResourceBundle>
    </extension>
    <extension
          point="org.knime.workbench.repository.categories">
