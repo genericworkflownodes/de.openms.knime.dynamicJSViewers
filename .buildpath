@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry kind="src" path="src"/>
 	<buildpathentry kind="src" path="nodes"/>
+	<buildpathentry kind="src" path="dependencies"/>
 	<buildpathentry kind="con" path="org.eclipse.dltk.mod.launching.INTERPRETER_CONTAINER"/>
 	<buildpathentry kind="con" path="org.eclipse.vjet.eclipse.core.JSNATIVE_CONTAINER/JS Native Types"/>
 	<buildpathentry kind="con" path="org.eclipse.vjet.eclipse.core.BROWSER_CONTAINER/Browser SDK"/>
-	<buildpathentry external="true" kind="lib" path="/Applications/KNIME%20SDK%203.3.1.app/Contents/Eclipse/plugins/org.eclipse.swt.cocoa.macosx.x86_64_3.105.1.v20160907-0248.jar"/>
 </buildpath>
