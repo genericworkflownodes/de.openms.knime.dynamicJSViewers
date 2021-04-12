@@ -85,6 +85,153 @@
                type="CSS">
          </importResource>
       </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="Lorikeet spectrum viewer"
+            name="lorikeet"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/specview.js"
+               type="JAVASCRIPT">
+         </importResource>
+         <webDependency
+               webResourceBundleID="jQuery_1.11.3">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="jQueryUi_1.10.4">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-aminoacid">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-internal">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-ion">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-jquery-flot">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-jquery-flot-selection">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-peptide">
+         </webDependency>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="lorikeet-aminoacid module"
+            name="lorikeet-aminoacid"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet-aminoacid">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/aminoacid.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="lorikeet-internal module"
+            name="lorikeet-internal"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet-internal">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/internal.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="lorikeet-ion module"
+            name="lorikeet-ion"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet-ion">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/ion.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="lorikeet-jquery-flot module"
+            name="lorikeet-jquery-flot"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet-jquery-flot">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/jquery.flot.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="lorikeet-jquery-flot-selection module"
+            name="lorikeet-jquery-flot-selection"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet-jquery-flot-selection">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/jquery.flot.selection.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="lorikeet-peptide module"
+            name="lorikeet-peptide"
+            usesDefine="false"
+            version="master"
+            webResourceBundleID="lorikeet-peptide">
+         <webResource
+               relativePathSource="dependencies/lorikeet/"
+               relativePathTarget="dependencies/lorikeet/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/lorikeet/peptide.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.categories">
+      <category
+            description="Visualizations for mass spectrometry data"
+            icon="nodes/js.png"
+            level-id="Visualization"
+            locked="false"
+            name="Visualization"
+            path="community/OpenMS">
+      </category>
    </extension>
 
    <!-- This is an example for providing an own category 

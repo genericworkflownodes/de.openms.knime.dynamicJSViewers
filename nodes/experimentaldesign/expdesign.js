@@ -2,6 +2,7 @@
 	var input = {};
 	var _value, _representation;
 	var _data;
+	var outTable;
 	
 	// I think there are currently some problems with the order of dependency objects
 	input.init = function(representation, value, dependencyObjects){
@@ -71,15 +72,36 @@
 	    });
 	    
 	    //var outTable={'@class': 'org.knime.core.data.StringValue', value: 'val'};
-	    var outTable={'@class': 'org.knime.js.core.JSONDataTable', table:
-	    					{'@class': 'org.knime.js.core.DataRow', row1:
-	    						[
-	    						 {'@class': 'org.knime.js.core.StringValue', cell1:'bla'}
-	    						]
-	    					}
-	    			 };
-	    _value.tables['annotatedTable'] = outTable;
-	    $('#btnGo').click(function(){
+	     outTable={		'@class': 'org.knime.js.core.JSONDataTable',
+	                   		id: 'annotatedTable',
+	                   		rows:
+	     							[
+		     							 {
+		     								 rowKey: "Row1",
+		     								 data: ["wtf", "wtf2"]
+			     						 }
+	     							],
+	     					spec:
+	     						{
+	     							'@class': 'org.knime.js.core.JSONDataTableSpec',
+	     							numColumns: 2,
+	     							numRows: 1,
+	     							colTypes: ["STRING","STRING"],
+	     							colNames: ["foo","bar"]
+	     						}
+	     			 };
+
+	     //For adding rows
+	    //_value.outTables.annotatedTable = {};
+		//for (var i = 0; i < table.getNumRows(); i++) {
+		//	var row = table.getRows()[i];
+		//	_value.outTables.annotatedTable[row.rowKey] = row.data;
+		//}
+
+	    _value.tables.annotatedTable = outTable;
+	    
+	    //IMportant: This is the click event
+	    /*$('#btnGo').click(function(){
 	            $('table').find('tr').not(':first').each(function(){
 	                var id = this.cells[0].innerHTML;
 	                //alert(id);
@@ -94,7 +116,7 @@
 	            });
 	            alert(JSON.stringify(outTable));
 	            _value.tables['annotatedTable'].table = outTable;
-	    });
+	    });*/
 	    
 	};
 	
@@ -120,6 +142,32 @@
 	};
 	
 	input.getComponentValue = function() {
+		
+		// if (!('annotatedTable' in _value.tables)){
+		// 	//alert(JSON.stringify(_value));
+		// 	//var table = new kt();
+		// 	//table.setDataTable(_representation.inObjects[0]);
+		//      var outTable={		'@class': 'org.knime.js.core.JSONDataTable',
+  //       		id: 'annotatedTable',
+  //       		rows:
+		// 				[
+		// 					 {
+		// 						 rowKey: "Row1",
+		// 						 data: ["wtf", "wtf2"]
+  // 						 }
+		// 				],
+		// 		spec:
+		// 			{
+		// 				'@class': 'org.knime.js.core.JSONDataTableSpec',
+		// 				numColumns: 2,
+		// 				numRows: 1,
+		// 				colTypes: ["STRING","STRING"],
+		// 				colNames: ["foo","bar"]
+		// 			}
+		//  };
+		// 	_value.tables['annotatedTable'] = outTable;
+		// }
+		_value.tables.annotatedTable = outTable;
 		return _value;
 	};
 	

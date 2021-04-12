@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ProteinViewer-Node extension for KNIME Workbench
-Bundle-SymbolicName: de.openms.proteinviewer;singleton:=true
+Bundle-SymbolicName: de.openms.knime.dynamicJSViewers;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: proteinviewer.jar
 Bundle-Vendor: 

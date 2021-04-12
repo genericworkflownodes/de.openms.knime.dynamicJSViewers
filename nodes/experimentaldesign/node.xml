@@ -3,7 +3,7 @@
 	xmlns="http://knime.org/dynamicnode/v3.0" xmlns:n="http://knime.org/node/v2.12"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://knime.org/dynamicjsnode/v3.0 http://www.knime.org/node/dynamicJSNode_v3.0.xsd"
-	jsNamespace="expdesign_namespace" nodeID="expdesign" categoryPath="/"
+	jsNamespace="expdesign_namespace" nodeID="expdesign" categoryPath="community/OpenMS/Visualization"
 	icon="../js.png" type="Visualizer">
 
 	<name>Experimental design annotator</name>
@@ -23,8 +23,11 @@
 			</options>
 		</tab>
 	</fullDescription>
+	<!--<outputOptions>
+		<dataOutputOption outPortIndex="0" id="annotatedTable" additionalColumnName="col" additionalColumnType="STRING" inPortIndex="0"/>
+	</outputOptions>-->
 	<outputOptions>
-		<dataOutputOption outPortIndex="0" id="annotatedTable" />
+		<dataOutputOption outPortIndex="0" id="annotatedTable" outputType="EMPTY_WITH_SPEC" inPortIndex="0"/>
 	</outputOptions>
 	<interactiveView name="Experimental Design">
 		A node for displaying peptides in protein sequences.
