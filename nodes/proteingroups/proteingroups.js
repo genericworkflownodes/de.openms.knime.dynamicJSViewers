@@ -29,6 +29,7 @@
 			_data[group] = { name : group, proteins : {} };
 			for (var i = 0; i < prots.length; i++) {
 				var protein = prots[i];
+				alert(protein)
 				_data[group].proteins[protein] = { name : protein, peptides : []};
 				_prot2Group[protein] = group;
 			}
@@ -43,6 +44,8 @@
 			
 			for (var i = 0; i < prots.length; i++) {
 				var protein = prots[i];
+				alert(protein)
+				alert(_prot2Group[protein])
 				if (_data[_prot2Group[protein]].proteins[protein]) {
 					_data[_prot2Group[protein]].proteins[protein].peptides.push(pep);
 				}

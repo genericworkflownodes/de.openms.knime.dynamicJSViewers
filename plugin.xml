@@ -188,6 +188,9 @@
                relativePath="dependencies/lorikeet/jquery.flot.js"
                type="JAVASCRIPT">
          </importResource>
+         <webDependency
+               webResourceBundleID="jQuery_1.11.3">
+         </webDependency>
       </webResourceBundle>
       <webResourceBundle
             debug="true"
@@ -204,6 +207,12 @@
                relativePath="dependencies/lorikeet/jquery.flot.selection.js"
                type="JAVASCRIPT">
          </importResource>
+         <webDependency
+               webResourceBundleID="jQuery_1.11.3">
+         </webDependency>
+         <webDependency
+               webResourceBundleID="lorikeet-jquery-flot">
+         </webDependency>
       </webResourceBundle>
       <webResourceBundle
             debug="true"
@@ -218,6 +227,59 @@
          </webResource>
          <importResource
                relativePath="dependencies/lorikeet/peptide.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="Apache echarts-gl library as GL extension to echarts"
+            exports="echarts"
+            name="echarts-gl"
+            usesDefine="false"
+            version="2"
+            webResourceBundleID="echarts-gl">
+         <webResource
+               relativePathSource="dependencies/echarts/"
+               relativePathTarget="dependencies/echarts/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/echarts/echarts-gl.js"
+               type="JAVASCRIPT">
+         </importResource>
+         <webDependency
+               webResourceBundleID="echarts">
+         </webDependency>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="true"
+            description="Apache echarts library"
+            exports="echarts"
+            name="echarts"
+            usesDefine="false"
+            version="5.0.2"
+            webResourceBundleID="echarts">
+         <webResource
+               relativePathSource="dependencies/echarts/"
+               relativePathTarget="dependencies/echarts/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/echarts/echarts.js"
+               type="JAVASCRIPT">
+         </importResource>
+      </webResourceBundle>
+      <webResourceBundle
+            debug="false"
+            description="Uber deck.gl library"
+            name="deckgl"
+            usesDefine="false"
+            version="8.4.13"
+            webResourceBundleID="deckgl">
+         <webResource
+               relativePathSource="dependencies/deckgl/"
+               relativePathTarget="dependencies/deckgl/">
+         </webResource>
+         <importResource
+               relativePath="dependencies/deckgl/dist.min.js"
                type="JAVASCRIPT">
          </importResource>
       </webResourceBundle>

@@ -84,9 +84,11 @@
 	     					spec:
 	     						{
 	     							'@class': 'org.knime.js.core.JSONDataTableSpec',
+	     							
 	     							numColumns: 2,
 	     							numRows: 1,
 	     							colTypes: ["STRING","STRING"],
+	     							knimeTypes: ["org.knime.core.data.StringValue","org.knime.core.data.StringValue"],
 	     							colNames: ["foo","bar"]
 	     						}
 	     			 };
