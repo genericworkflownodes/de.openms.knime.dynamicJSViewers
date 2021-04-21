@@ -3,9 +3,8 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Mass-spectrometry Javascript Views (for the KNIME OpenMS plugin)
 Bundle-SymbolicName: de.openms.knime.dynamicJSViewers;singleton:=true
 Bundle-Version: 1.0.0
-Bundle-ClassPath: proteinviewer.jar
-Bundle-Vendor: 
- Zuse Institute Berlin
+Bundle-ClassPath: nodes
+Bundle-Vendor: Zuse Institute Berlin
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core,
  org.knime.workbench.repository,
@@ -13,4 +12,3 @@ Require-Bundle: org.eclipse.core.runtime,
  org.knime.dynamic.js;bundle-version="3.7.0",
  org.knime.dynamic.node.generation;bundle-version="3.7.0",
  org.knime.js.core;bundle-version="3.3.0"
-
