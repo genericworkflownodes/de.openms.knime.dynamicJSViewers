@@ -24,7 +24,7 @@
         
         var body = d3.select("body");
         body.append("h2").attr("id", "tit")
-                .style("min-width", MIN_WIDTH + "px").text("Fragmentspectrum");
+                .style("min-width", MIN_WIDTH + "px").text("Spectrum View");
         layoutContainer = body.append("div").attr("id", "lorikeet")
                 .style("min-width", MIN_WIDTH + "px");
         layoutContainer.style("width", 300 + "px")
@@ -53,7 +53,7 @@
 	    // -- Initial interactivity settings --
       if (knimeService.isInteractivityAvailable()) {
           //alert("Interactive")
-      		knimeService.subscribeToSelection(_representation.inObjects[0].id, selectionChanged);
+          knimeService.subscribeToSelection(_representation.inObjects[0].id, selectionChanged);
       } else {
         //alert("Not Interactive!")
       }
@@ -73,15 +73,40 @@
   function drawChart(row) {
     var intIdx = getDataColumnID(_representation.options.intensities, _representation.inObjects[0])
   	var seqIdx = getDataColumnID(_representation.options.sequence, _representation.inObjects[0])
-  	var mzIdx = getDataColumnID(_representation.options.mz, _representation.inObjects[0])
+    var mzIdx = getDataColumnID(_representation.options.mz, _representation.inObjects[0])
+    var modIdx = getDataColumnID(_representation.options.mods, _representation.inObjects[0])
+    var precmassIdx = getDataColumnID(_representation.options.precursormass, _representation.inObjects[0])
+    var chgIdx = getDataColumnID(_representation.options.charge, _representation.inObjects[0])
 
     var sequence = row.data[seqIdx];
-    var varMods = [];
+    var staticModsStr = row.data[modIdx].substring(1, row.data[modIdx].length-1);
+    var staticModsFmt = [];
+    var ntermMod = 0;
+
+    if (staticModsStr != "")
+    {
+      var staticMods = staticModsStr.split(", ");
+
+      for (i = 0 ; i < staticMods.length; i++)
+      {
+        var split = staticMods[i].split("-");
+        var pos = parseInt(split[0]);
+        if (pos === 0)
+        {
+          ntermMod = parseFloat(split[1]);
+        }
+        else
+        {
+          staticModsFmt.push({index: split[0], modMass: parseFloat(split[1]), aminoAcid: sequence[split[0]-1]});
+        }
+      }
+    }
+
     // TODO parse mods from another column
     // modification index = 14; modification mass = 16.0; modified residue = 'M'
-    varMods[0] = {index: 14, modMass: 16.0, aminoAcid: 'M'};
+    //varMods[0] = {index: 14, modMass: 16.0, aminoAcid: 'M'};
     // mass to be added to the N-terminus
-    var ntermMod = 164.07;
+    //var ntermMod = 164.07;
     
     var peaks = [];
 
@@ -104,18 +129,18 @@
     /* render the spectrum with the given options */
     $("#lorikeet").text("") // reset first otherwise it is appended
     	$("#lorikeet").specview({sequence: sequence, 
-    								scanNum: 2441,
-    								charge: 2,
-    								precursorMz: 1012.1,
-    								fileName:'sh_1617_JX_070209p_KO410_run1',
-    								//staticMods: staticMods, 
-    								variableMods: varMods, 
+    								scanNum: 1,
+    								charge: row.data[chgIdx],
+    								precursorMz: row.data[precmassIdx],
+    								fileName:'KNIME Table', // TODO pass as flow variable?
+    								//staticMods: staticModsFmt, 
+    								variableMods: staticModsFmt, 
     								ntermMod: ntermMod, 
-                                    showInternalIonOption: true,
-                                    showMHIonOption: true,
-                                    showAllTable: true,
+                    showInternalIonOption: true,
+                    showMHIonOption: true,
+                    showAllTable: false,
     								//ctermMod: ctermMod,
-    								peaks: peaks
+                    peaks: peaks
     								});
   }
 	
