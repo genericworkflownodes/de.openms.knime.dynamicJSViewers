@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<js:knimeNode xmlns:js="http://knime.org/dynamicjsnode/v3.0"
+	xmlns="http://knime.org/dynamicnode/v3.0" xmlns:n="http://knime.org/node/v2.12"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://knime.org/dynamicjsnode/v3.0 http://www.knime.org/node/dynamicJSNode_v3.0.xsd"
+	jsNamespace="mapviewer_namespace" nodeID="mapviewer" categoryPath="community/OpenMS/Visualization"
+	icon="../js.png" type="Visualizer">
+
+	<name>MS Map Viewer</name>
+	<shortDescription>A node for displaying stacked survey scans</shortDescription>
+	<fullDescription>
+		<intro>
+		      <n:p>
+		A node for displaying stacked mass-spectrometry survey scans.
+		      </n:p>
+		</intro>
+		<tab name="Options">
+			<options>
+				<columnSelectorOption name="RT"
+		            id="rt" inPortIndex="0" label="RT" filterClasses="org.knime.core.data.DoubleValue">
+		            Select the retention time column.
+		        </columnSelectorOption>
+		        <columnSelectorOption name="Intensities"
+		            id="intensities" inPortIndex="0" label="Intensities" filterClasses="org.knime.core.data.collection.ListDataValue">
+		            Select the intensities column.
+		        </columnSelectorOption>
+		        <columnSelectorOption name="MZ"
+		            id="mz" inPortIndex="0" label="MZ" filterClasses="org.knime.core.data.collection.ListDataValue">
+		            Select the m/z column with the same size as intensities.
+		        </columnSelectorOption>
+		        <checkBoxOption name="Subscribe to selection events" id="subscribeSelection"
+               		label="Subscribe to selection events" defaultValue="true" saveInView="true">
+               		If checked, the view reacts on notifications from other interactive views that the selection has been changed. See also "Publish selection events".
+           		</checkBoxOption>
+			</options>
+		</tab>
+	</fullDescription>
+	<!--<outputOptions>
+		<dataOutputOption outPortIndex="0" id="chartImage" />
+	</outputOptions>-->
+	<interactiveView name="Map Viewer">
+	Stacked survey scans.
+	</interactiveView>
+	<ports>
+		<inPort portType="Data" name="Input Data" index="0">
+			Data table containing the information for the map viewer. Check the config dialogue for the expected columns.
+		</inPort>
+	<!--<outPort portType="Image" name="Box Plot image" index="0">
+			SVG image of the box plot.
+		</outPort>-->
+	</ports>
+	<js:resources>
+		<js:resource type="js" path="mapviewer.js" />
+		<js:resource type="css" path="styles.css" />
+	</js:resources>
+	<js:dependencies>
+		<js:dependency name="D3" path="D3_3.2.8" type="local" />
+		<js:dependency name="echarts" path="echarts" type="local" />
+		<js:dependency name="echarts-gl" path="echarts-gl" type="local" />
+	</js:dependencies>
+</js:knimeNode>

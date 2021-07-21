@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<js:knimeNode xmlns:js="http://knime.org/dynamicjsnode/v3.0"
+	xmlns="http://knime.org/dynamicnode/v3.0" xmlns:n="http://knime.org/node/v2.12"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://knime.org/dynamicjsnode/v3.0 http://www.knime.org/node/dynamicJSNode_v3.0.xsd"
+	jsNamespace="expdesign_namespace" nodeID="expdesign" categoryPath="community/OpenMS/Visualization"
+	icon="../js.png" type="Visualizer">
+
+	<name>Experimental design annotator</name>
+	<shortDescription>Test</shortDescription>
+	<fullDescription>
+		<intro>
+		      <n:p>
+		      Test
+		      </n:p>
+		</intro>
+		<tab name="Options">
+			<options>
+		        <columnSelectorOption name="Spectrum files"
+		            id="spectradata" inPortIndex="0" label="Spectrum files" filterClasses="org.knime.core.data.StringValue">
+		            Select the column holding the spectrum file names.
+		        </columnSelectorOption>
+			</options>
+		</tab>
+	</fullDescription>
+	<!--<outputOptions>
+		<dataOutputOption outPortIndex="0" id="annotatedTable" additionalColumnName="col" additionalColumnType="STRING" inPortIndex="0"/>
+	</outputOptions>-->
+	<outputOptions>
+		<dataOutputOption outPortIndex="0" id="annotatedTable" outputType="EMPTY_WITH_SPEC" inPortIndex="0"/>
+	</outputOptions>
+	<interactiveView name="Experimental Design">
+		A node for displaying peptides in protein sequences.
+	</interactiveView>
+	<ports>
+		<inPort portType="Data" name="Spectra Data" index="0">
+			Data table containing all spectra files to annotate.
+		</inPort>
+		<outPort portType="Data" name="Experimental Design" index="0">
+			Annotated spectra files.
+		</outPort>
+	</ports>
+	<js:resources>
+		<js:resource type="js" path="expdesign.js" />
+		<js:resource type="css" path="styles.css" />
+	</js:resources>
+	<js:dependencies>
+		<js:dependency name="bootstrap" path="bootstrap" type="local" />
+		<js:dependency name="dynaTable" path="dynaTable" type="local" />
+		<js:dependency name="knimeTable" path="KnimeTable_1.0.0" type="local" />
+	</js:dependencies>
+</js:knimeNode>
