@@ -11,6 +11,7 @@
 		<tycho.version>1.4.0</tycho.version>
 		<tycho.extras.version>1.4.0</tycho.extras.version>
 		<tycho.test.jvmArgs>-Xmx1024m</tycho.test.jvmArgs>
+		<tycho.scmUrl>scm:git:https://github.com/genericworkflownodes/de.openms.knime.dynamicJSViewers</tycho.scmUrl>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>

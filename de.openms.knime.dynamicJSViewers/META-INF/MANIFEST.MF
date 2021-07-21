@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Mass-spectrometry Javascript Views (for the KNIME OpenMS plugin)
 Bundle-SymbolicName: de.openms.knime.dynamicJSViewers;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: nodes/,
  dependencies/
 Bundle-Vendor: Zuse Institute Berlin
