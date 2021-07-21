@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.openms.knime.dynamicJSViewers.feature"
+      label="OpenMS JavaScript Views"
+      version="1.0.0.qualifier">
+
+   <description>
+This package was developed as part of the MODAL project and adds JavaScript
+visualizations for mass-spectrometry data to KNIME.
+It is intended to be used together with the KNIME OpenMS plugin.
+OpenMS is an open-source software C++ library for LC/MS data management and 
+analyses. It offers an infrastructure for the development of mass 
+spectrometry related software and powerful 2D and 3D visualization.
+
+OpenMS is free software available under the three clause BSD license and runs 
+under Windows, MacOSX and Linux.
+   </description>
+
+   <copyright>
+      Copyright Zuse Institute Berlin and Freie Universitaet Berlin 2021.
+   </copyright>
+
+   <license>
+      BSD 3-Clause License
+
+--------------------------------------------------------------------------
+                  OpenMS KNIME JS Views
+--------------------------------------------------------------------------
+Copyright Zuse Institute Berlin and Freie Universitaet Berlin 2021.
+
+This software is released under a three-clause BSD license:
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of any author or any participating institution
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+For a full list of authors, refer to the file AUTHORS.
+--------------------------------------------------------------------------
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL ANY OF THE AUTHORS OR THE CONTRIBUTING
+INSTITUTIONS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+   </license>
+
+   <plugin
+         id="de.openms.knime.dynamicJSViewers"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
