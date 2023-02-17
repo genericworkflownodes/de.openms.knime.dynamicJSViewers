@@ -1,0 +1,9 @@
+This package was developed as part of the MODAL project and adds JavaScript
+visualizations for mass-spectrometry data to KNIME.
+It is intended to be used together with the KNIME OpenMS plugin.
+OpenMS is an open-source software C++ library for LC/MS data management and 
+analyses. It offers an infrastructure for the development of mass 
+spectrometry related software and powerful 2D and 3D visualization.
+
+OpenMS is free software available under the three clause BSD license and runs 
+under Windows, MacOSX and Linux.
