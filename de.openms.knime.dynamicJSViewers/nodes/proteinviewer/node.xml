@@ -11,8 +11,8 @@
 	<fullDescription>
 		<intro>
 		      <n:p>
-		      Test
-		      </n:p>
+			A node for displaying peptides in protein sequences.
+			</n:p>
 		</intro>
 		<tab name="Options">
 			<options>
