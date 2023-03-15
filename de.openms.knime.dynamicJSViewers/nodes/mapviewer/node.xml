@@ -11,7 +11,7 @@
 	<fullDescription>
 		<intro>
 		      <n:p>
-		A node for displaying stacked mass-spectrometry survey scans.
+		A node for displaying stacked mass spectrometry survey scans.
 		      </n:p>
 		</intro>
 		<tab name="Options">
@@ -28,10 +28,10 @@
 		            id="mz" inPortIndex="0" label="MZ" filterClasses="org.knime.core.data.collection.ListDataValue">
 		            Select the m/z column with the same size as intensities.
 		        </columnSelectorOption>
-		        <checkBoxOption name="Subscribe to selection events" id="subscribeSelection"
+		        <!--<checkBoxOption name="Subscribe to selection events" id="subscribeSelection"
                		label="Subscribe to selection events" defaultValue="true" saveInView="true">
                		If checked, the view reacts on notifications from other interactive views that the selection has been changed. See also "Publish selection events".
-           		</checkBoxOption>
+           		</checkBoxOption>-->
 			</options>
 		</tab>
 	</fullDescription>
