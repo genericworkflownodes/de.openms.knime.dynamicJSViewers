@@ -59,14 +59,14 @@
             exports="Handlebars"
             name="handlebars"
             usesDefine="true"
-            version="4.0.5"
+            version="4.7.7"
             webResourceBundleID="handlebars">
          <webResource
-               relativePathSource="dependencies/handlebars/handlebars-v4.0.5.js"
-               relativePathTarget="dependencies/handlebars/handlebars-v4.0.5.js">
+               relativePathSource="dependencies/handlebars/handlebars-v4.7.7.js"
+               relativePathTarget="dependencies/handlebars/handlebars-v4.7.7.js">
          </webResource>
          <importResource
-               relativePath="dependencies/handlebars/handlebars-v4.0.5.js"
+               relativePath="dependencies/handlebars/handlebars-v4.7.7.js"
                type="JAVASCRIPT">
          </importResource>
       </webResourceBundle>
